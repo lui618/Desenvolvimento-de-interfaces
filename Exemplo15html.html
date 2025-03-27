@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 15-html formularios</title>
+</head>
+
+<body>
+    <form  action="paginaDestino" method="get">
+        <h1>Exemplo 15 formulario - Componentes</h1>
+        <div>
+            <label for="">Nome</label> <br>
+            <input type="text" name="txtNameLogin" id="txtNome">
+        </div>
+        <br>
+        <div>
+            <label for="">Data de nascimento</label> <br>
+            <input type="date" name="txtNameDataNascimento" id="txtNameDataNascimento">
+        </div>
+        <br>
+        <div>
+            <label for="">Email</label> <br>
+            <input type="email" name="txtNameEmail" id="txtNameEmail">
+        </div>
+        <br>
+        <div>
+            <label for="">Estado Civil</label>
+            <select name="cboEstadoCivil" id="">
+                <option value="1">Casado</option>
+                <option value="2">Solteiro</option>
+                <option value="3">Divorciado</option>
+                <option value="4">Prefiro nao informar</option>
+                <select>
+        </div>
+        <br>
+        <div>
+            <label for="">Sexo</label><br>
+            <input type="radio" name="rdNameSexo" id="rdSexo" value="1">Masculino
+            <input type="radio" name="rdNameSexo" id="rdSexo" value="1">Feminino
+        </div>
+        <br>
+        <div>
+            <label for="">Escolha uma ou mais areas de atuação:</label> <br>
+            <input type="checkbox" name="schkAtuaçao" id="schkAtuaçao" value="1"> Back-end <br>
+            <input type="checkbox" name="schkAtuaçao" id="schkAtuaçao" value="2"> Analista de processos <br>
+            <input type="checkbox" name="schkAtuaçao" id="schkAtuaçao" value="3"> Analaista de processos <br>
+            <input type="checkbox" name="schkAtuaçao" id="schkAtuaçao" value="4">Analista de dados <br>
+        </div>
+        <br>
+        <div>
+            <button type="submit">Cadastrar</button>
+        </div>
+        
+    </form>
+</body>
+
+</html>
