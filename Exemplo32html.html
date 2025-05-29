@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 32 -  HTML CSS</title>
+    <style>
+        body{
+            margin: 0;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 80% 1fr;
+            grid-template-rows: 10% 1fr 10%;
+            grid-gap: 20px;
+            height: 90vh;
+        }
+        header{
+            background-color: deeppink;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        main{
+            background-color: lightgreen;
+        }
+        aside{
+            background-color: lightskyblue;
+        }
+        footer{
+            background-color: gold;
+            grid-column: 1/3;
+        }
+        section{
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            1
+        </header>
+        <main>
+            2
+            <section>
+                <h2>Oque é o Grid Layout</h2>
+                <article>
+                    <p>O gRid Layout é bidimencional permitindo que o desenvolvedor possa separar o layout da página em linhas e colunas, diferentemente do flex box que é unidimencional ordenando os elemnentos em linhas.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eum nostrum maxime veniam vel tempora molestiae cumque officiis velit odio fuga laboriosam sequi, dicta sunt quasi. Id nesciunt hic sint?</p>
+                    <article>
+                        <h2>Flexgrid ou Grid Layout</h2>
+                        <p>O Flex box e o grid layout pode ser usado em conjunto. Voce pode aplicar o FlexBox a elementos dentro de um layout de grae como Grid Layout aproveitando dos doiis mundos.</p>
+                        <p>
+                            A escolha entre flexbox e Grid Layout não se trata de um substiituir o outro, mas sim de entender as necessidades especificas do seu layout e escolher a tecnica que melhor atenda suas necessidades
+                        </p>
+                    </article>
+                </article>
+            </section>
+        </main>
+        <aside>
+            3
+        </aside>
+        <footer>
+            4
+        </footer>
+    </div>
+</body>
+</html>

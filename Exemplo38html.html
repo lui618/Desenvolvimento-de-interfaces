@@ -9,74 +9,78 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Title</title>
+    <title>Exemplo 38 - Bootstrap</title>
 </head>
 
 <body>
     <div class="container-sm">
-        <div class="card mt-4">
-            <div class="card-header bg-dark text-white">
+        <div class="card mt-4S">
+            <div class="card-header bg-info text-white">
                 Cadastro Professor
             </div>
             <div class="card-body">
                 <div class="row">
                     <div class="col-4">
                         <label for="">Nome</label>
-                        <input type="text" id="txtNome" class="form-control">
+                        <input type="text" name="" id="txtNome" class="form-control">
                     </div>
                     <div class="col-4">
-                        <label for="">
-                            CPF
-                        </label>
-                        <input type="text" class="form-control">
+                        <label for="">CPF</label>
+                        <input type="text" name="" id="txtNome" class="form-control">
                     </div>
                     <div class="col-4">
-                        <label for="">
-                            e-mail
-                        </label>
-                        <input type="text" class="form-control">
+                        <label for="">E-mail</label>
+                        <input type="email" name="" id="txtNome" class="form-control">
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-4">
-                        <label for="">
-                            
-                        </label>
-                        <input type="text" class="form-control">
+                        <label for="">Telefone</label>
+                        <input type="text" name="" id="txtNome" class="form-control">
                     </div>
                     <div class="col-4">
-                        <label for=""></label>
-                        <input type="text" class="form-control">
+                        <label for="">Data de Nascimento</label>
+                        <input type="date" name="" id="txtNome" class="form-control">
                     </div>
                     <div class="col-4">
-                        <label for=""></label>
-                        <input type="text" class="form-control">
+                        <label for="">Gênero</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Selecione um Gênero</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Feminino</option>
+                            <option value="3">Outros</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="">Area de Atuação</label>
+                            <input type="text" name="" id="txtNome" class="form-control">
+                        </div>
+                        <div class="col-6">
+                            <label for="">Titulação Maxima</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Selecione</option>
+                                <option value="1">Graduação</option>
+                                <option value="2">Especialização</option>
+                                <option value="3">Mesrado</option>
+                                <option value="4">Doutorado</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-6">
-                        <label for=""></label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="col-6">
-                        <label for=""></label>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-
             </div>
-
             <div class="card-footer">
                 <div class="d-flex justify-content-end gap-2">
-                    
-                        <button type="button" class="btn btn-primary bg-danger">Limpar</button>
 
-                        <button type="button" class="btn btn-primary bg-success">Enviar</button>
+                    <button type="button" class="btn btn-success">Cadastrar</button>
+
+                    <button type="button" class="btn btn-danger">Cancelar</button>
+
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
