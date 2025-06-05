@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Exemplo 40 - javascript</title>
+</head>
+<body>
+<div class="container-sm mt-4">
+    <div class="form-group">
+        <label for="">informe a base do triangulo</label>
+        <input type="text" name="txtBase" id="txtBase"
+        class="form-control">
+    </div>
+
+    <div class="form-group mb-4">
+        <label for="">informe a altura do triangulo</label>
+        <input type="text" name="txtAltura" id="txtAltura"
+        class="form-control">
+    </div>
+
+    <div class="form-group mb-4">
+        <button type="button" onclick="CalcularAreaTriangulo()" class="btn btn-primary form-control">Calcular a area do triangulo</button>
+    </div>
+    <div class="alert alert-primary mt-4" role="alert">
+        <h4 id="resultado"></h4>
+    </div>
+
+</div>
+<script>
+    function CalcularAreaTriangulo(){
+        var base=document.getElementById("txtBase").value;
+        var altura=document.getElementById("txtAltura").value;
+        var areaTriangulo = (base*altura)/2;
+        document.getElementById("resultado") .innerHTML = "A área do triangulo é"
+        +areaTriangulo;
+        window.alert("A area do triangulo é: " + areaTriangulo);
+
+        if(areaTriangulo>20){
+            let areaMaior="Esta area é maior que 20";
+            window.alert("Uso do let -" +areaMaior)
+        }
+        document.writeln("Estou tentando usar a variavel do tipo let, que só funciona no bloco dentro do if");
+        document.writeln(areaMaior);
+
+    }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
