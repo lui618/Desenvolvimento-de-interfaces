@@ -1,0 +1,57 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Exempo 45 - JavaScript</title>
+<style type="text/css" id="operaUserStyle"></style></head>
+
+<body>
+    <div class="container-sm">
+        <div class="alert alert-primary" role="alert">
+            <h1>Exemplo 45 - JavaScript Método Map</h1>
+            <p>Seja um vetor de números pares 0 até 10 [0,2,4,6,8,10]</p>
+            <p>Vamos criar netes exemplo um novo vetor clicando no botão abaixo e usadno o método Map para multiplicar
+                os elementos por 5 e exibir um novo valor.</p>
+            <p>Para fazer isso podemos usar a seguinte estrutura:</p>
+            <pre>            for (let i = 0; i &lt; numeros.length; i++) {
+                numeros[i] = numeros[i] * 5;
+            }
+         </pre>
+            <p></p>
+            <p>Ou usando Map:
+            </p><pre>            const numsMultiplicados = numeros.map(function (numero) {
+                return numero * 5;
+            });
+
+            ou usando Arrow function
+            const numsMultiplicados = numeros.map(numero =&gt; numero * 5);
+        </pre>
+            <p></p>
+            <div class="d-grid gap-2">
+                <button type="button" id="cmdResultado" onclick="multiplicarPor5()" class="btn btn-primary">Clique aqui para multiplicr por
+                    5</button>
+            </div>
+            <div class="alert alert-success" role="alert">
+                <h3>Resultado</h3>
+                <p id="resultado"></p>
+            </div>
+            <script>
+                function multiplicarPor5(){
+                    const numeros = [2,4,5,6,8,10];
+                    const novoVetor = numeros.map(function (numero){
+                        return numero*5;
+                    });
+                    document.getElementById("resultado").textContent = "Resultado da multiplicação usando o Map " + novoVetor;
+                }
+            </script>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+
+
+</body></html>

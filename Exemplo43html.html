@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Title</title>
+</head>
+
+<body>
+  <div class="container-sm">
+    <h1 class="text-center text-primary mb-3">Entendendo os métodos Javascript: Push, Pop, Sort, LastIndexOf, IndexOf
+    </h1>
+
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h5 class="card-title text-info">1. "push()"</h5>
+      </div>
+      <div class="card-body">
+        <p>O método "push()" adiciona um ou mais elementos ao final de um array e
+          retorna o novo comprimento do array.</p>
+        <div class="bg-light p-3 rounded border">
+          <pre><code>
+let frutas = ["maçã", "banana"];
+console.log("Array original:", frutas); // Saída: ["maçã", "banana"]
+
+frutas.push("laranja", "uva");
+console.log("Array após push:", frutas); // Saída: ["maçã", "banana", "laranja", "uva"]
+console.log("Novo comprimento:", frutas.length); // Saída: 4
+                </code></pre>
+        </div>
+        <p class="mt-3 fst-italic text-secondary mt-2">
+          Neste exemplo, "laranja" e "uva" são adicionados ao final do array "frutas".
+        </p>
+      </div>
+    </div>
+
+    <div class="alert alert-success mt-4" role="alert">
+      <p>Outro exemplo com "push":</p>
+      <pre><code>
+let carros = ["Fiat", "Ford"];
+carros.push("Chevy", "Honda");
+console.log("Array após push:", carros); // Saída: ["Fiat", "Ford", "Chevy", "Honda"]
+        </code></pre>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h5 class="card-title text-info">2. "pop()"</h5>
+      </div>
+      <div class="card-body">
+        <p>O método "pop()" remove o último elemento de um array e retorna esse
+          elemento removido. Ele altera o comprimento do array.</p>
+        <div class="bg-light p-3 rounded border">
+          <pre><code>
+let carros = ["Fiat", "Ford", "Chevrolet"];
+let carroRemovido = carros.pop();
+console.log("Array após pop:", carros); // Saída: ["Fiat", "Ford"]
+console.log("Carro removido:", carroRemovido); // Saída: "Chevrolet"
+                </code></pre>
+        </div>
+        <p class="mt-3 fst-italic text-secondary mt-2">
+          Neste exemplo, "Chevrolet" é removido do array "carros" e retornado.
+        </p>
+        <div class="alert alert-success mt-3" role="alert">
+          <strong>Resultado esperado:</strong>
+          <br>
+          Array original: ["Fiat", "Ford", "Chevrolet"]<br>
+          Array após pop: ["Fiat", "Ford"]<br>
+          Elemento removido: Chevrolet
+        </div>
+      </div>
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+          <h5 class="card-title text-info">3. "sort()"</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">O método <code>sort()</code> ordena os elementos de um array no local e retorna
+            o array. A ordenação padrão é alfabética (para strings) ou numérica crescente (para números, se uma
+            função de comparação for fornecida).</p>
+          <div class="bg-light p-3 rounded border">
+            <pre><code>
+let numeros = [5, 2, 8, 1, 9];
+console.log("Array original (números):", numeros); // Saída: [5, 2, 8, 1, 9]
+
+numeros.sort(); // Ordenação padrão, pode não funcionar para números como esperado
+console.log("Array após sort (padrão):", numeros); // Saída: [1, 2, 5, 8, 9] (neste caso funciona)
+
+let palavras = ["banana", "maçã", "laranja", "abacaxi"];
+console.log("Array original (palavras):", palavras); // Saída: ["banana", "maçã", "laranja", "abacaxi"]
+
+palavras.sort();
+console.log("Array após sort (palavras):", palavras); // Saída: ["abacaxi", "banana", "laranja", "maçã"]
+            </code></pre>
+            // Para ordenar números corretamente, precisamos de uma função de comparação:
+            let outrosNumeros = [50, 2, 10, 80, 9];
+            console.log("Array original (outros números):", outrosNumeros); // Saída: [50, 2, 10, 80, 9]
+
+            outrosNumeros.sort((a, b) => a - b); // Função de comparação para ordem crescente
+            console.log("Array após sort (numérico):", outrosNumeros); // Saída: [2, 9, 10, 50, 80]
+            </pre></code>
+          </div>
+          <p class="mt-3 fst-italic text-secondary mt-2">
+            Como (a, b) => a - b para ordem crescente.
+          </p>
+        </div>
+      </div>
+
+      <div class="alert alert-success mt-3" role="alert">
+        <strong>Resultado esperado:</strong>
+        <br>
+        Array original (números): [50, 2, 10, 80, 9]<br>
+        Array após sort (padrão): [10, 2, 50, 80, 9]<br>
+        Array original (palavras): ["banana", "maçã", "laranja", "abacaxi"]<br>
+        Array após sort (palavras): ["abacaxi", "banana", "laranja", "maçã"]<br>
+        Array original (outros números): [50, 2, 10, 80, 9]<br>
+        Array após sort (numérico): [2, 9, 10, 50, 80]
+      </div>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h5 class="card-title text-info">4. "lastIndexOf()"</h5>
+      </div>
+      <div class="card-body">
+        <p class="card-text">O método <code>lastIndexOf()</code> retorna o último índice em que um determinado
+          elemento pode ser encontrado no array, ou -1 se não estiver presente. A busca é feita do final para
+          o início.</p>
+        <div class="bg-light p-3 rounded border">
+          <pre><code>
+let cores = ["vermelho", "verde", "azul", "amarelo"];
+console.log("Array:", cores); // Saída: ["vermelho", "verde", "azul", "amarelo"]
+
+let indiceAzul = cores.lastIndexOf("azul");
+console.log("Último índice de 'azul':", indiceAzul); // Saída: 2
+
+let indiceRoxo = cores.lastIndexOf("roxo");
+console.log("Último índice de 'roxo':", indiceRoxo); // Saída: -1 (não encontrado)
+
+// Procurando a partir de um índice específico (do final para o início)
+
+// Procurando a partir de um índice específico (do final para o início)
+let indiceAzulUltimoIndice2 = cores.lastIndexOf("azul", 2);
+console.log("Último índice de 'azul' até o índice 2:", indiceAzulUltimoIndice2); // Saída: 2
+
+</div>
+            <p class="fst-italic text-secondary mt-2">
+                Essa busca vai do final para o início. Se o elemento não for encontrado, retorna -1.
+            </p>
+        </div>
+    </div>
+
+    <div class="alert alert-success mt-3" role="alert">
+        <strong>Resultado esperado:</strong><br>
+        Array: ["vermelho", "verde", "azul", "amarelo"]<br>
+        Último índice de 'azul': 2<br>
+        Último índice de 'roxo': -1<br>
+        Último índice de 'azul' até o índice 2: 1
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+    <div class="card-header">
+        <h5 class="card-title text-info">5. "indexOf()"</h5>
+    </div>
+    <div class="card-body">
+        <p class="card-text">O método <code>indexOf()</code> retorna o primeiro índice em que um determinado
+            elemento pode ser encontrado no array, ou -1 se não estiver presente. A busca é feita do início para
+            o fim.</p>
+        <div class="bg-light p-3 rounded border">
+            <pre><code>
+let animals = ["cachorro", "gato", "pássaro", "gato", "peixe"];
+console.log("Array:", animals); // Saída: ["cachorro", "gato", "pássaro", "gato", "peixe"]
+
+let indiceGato = animals.indexOf("gato");
+console.log("Primeiro índice de 'gato':", indiceGato); // Saída: 1
+
+let indiceCobra = animals.indexOf("cobra");
+console.log("Primeiro índice de 'cobra':", indiceCobra); // Saída: -1 (não encontrado)
+
+// Procurando a partir de um índice específico (do início para o fim)
+let indiceGatoAPartirDoIndice2 = animals.indexOf("gato", 2);
+console.log("Primeiro índice de 'gato' a partir do índice 2:", indiceGatoAPartirDoIndice2); // Saída: 3
+            </code></pre>
+            </div>
+            <p class="fst-italic text-secondary mt-2">
+                Ele busca do início para o final. Se o elemento não for encontrado, retorna -1.
+            </p>
+        </div>
+    </div>
+
+    <div class="alert alert-success mt-3" role="alert">
+        <strong>Resultado esperado:</strong><br>
+        Array: ["cachorro", "gato", "pássaro", "gato", "peixe"]<br>
+        Primeiro índice de 'gato': 1<br>
+        Primeiro índice de 'cobra': -1<br>
+        Primeiro índice de 'gato' a partir do índice 2: 3
+    </div>
+</div>
+
+<div class="card mb-4 shadow-sm">
+    <div class="card-header">
+        <h5 class="card-title text-info">Teste com os métodos acima mencionados</h5>
+    </div>
+    <div class="card-body">
+        <h5 class="alert alert-success mt-2">Testando os métodos (push, pop, sort, lastIndexOf e IndexOf)</h5>
+        <script>
+            let vetor1 = [];
+            vetor1.push("Adriano");
+            vetor1.push("Bianca");
+            vetor1.push("João");
+            vetor1.push("Maria");
+            vetor1.push("Pedro");
+            vetor1.push("Ana");
+            vetor1.push("Lucas");
+            vetor1.push("Gabriela");
+            vetor1.push("Rafael");
+            vetor1.push("Carla");
+            vetor1.push("Nicolle");
+            vetor1.push("Fernando");
+            vetor1.push("Paula");
+            vetor1.push("Gustavo");
+            vetor1.push("Rodrigo");
+             document.write("<p>Vetor inicial (" + vetor1.length + " elementos): " + vetor1.join(", ") + "</p>");
+
+            let removido = vetor1.pop();
+            document.write("<p>Após pop (removeu '" + removido + "'): " + vetor1.join(", ") + "</p>");
+
+            vetor1.sort();
+            document.write("<p>Após sort (ordenação alfabética): " + vetor1.join(", ") + "</p>");
+
+            let indiceLucas = vetor1.indexOf("Lucas");
+            document.write("<p>IndexOf 'Lucas': " + indiceLucas + "</p>");
+
+            let ultimoIndiceMaria = vetor1.lastIndexOf("Maria");
+            document.write("<p>LastIndexOf 'Maria': " + ultimoIndiceMaria + "</p>");
+        </script>
+    </div>
+</div>
+<div>
+    <script>
+        vetor1.sort();
+        document.write("<h3>Uso do método sort para ordenar o vetor</h3>");
+        document.write("Vetor ordenado: " + vetor1);
+        document.write("<br>");
+        document.write("</div>");
+    </script>
+</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</html>
+        </script>
+    </div>
+</div>
+        </div>
+        
+        <p class="fst-italic text-secondary mt-2">
+          
+      </div>
+
+    </div>
+
+
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
